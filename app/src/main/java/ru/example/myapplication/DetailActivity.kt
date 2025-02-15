@@ -16,20 +16,20 @@ class DetailActivity : AppCompatActivity() {
 
         val toolbar: MaterialToolbar = findViewById(R.id.toolbar)
         toolbar.setNavigationOnClickListener {
-            // Navigate back to MainActivity
+            // Возвращаемся в прошлый экран
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
             startActivity(intent)
             finish()
         }
 
-        // Hide the action bar when the activity is created
+        // Убераем аппБар
         supportActionBar?.hide()
     }
 
     override fun onPause() {
         super.onPause()
-        // Show the action bar when the activity is paused
+        // Возращаем аппБар, если экран не используется
         supportActionBar?.show()
     }
 }
