@@ -9,7 +9,6 @@ import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
 import ru.example.myapplication.databinding.ActivityLoginBinding
 
-// LoginActivity.kt (app/src/main/java/com/yourpackage/)
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private var isPasswordVisible = false
@@ -47,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
                 binding.passwordEditText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 binding.passwordInput.endIconDrawable?.setColorFilter(mainTitleColor, android.graphics.PorterDuff.Mode.SRC_IN)
             }
-            // Move cursor to the end of the text
+    
             binding.passwordEditText.setSelection(binding.passwordEditText.text?.length ?: 0)
         }
     }
@@ -118,7 +117,6 @@ class LoginActivity : AppCompatActivity() {
     private fun showError(message: String) {
         Snackbar.make(binding.root, message, Snackbar.LENGTH_LONG)
             .setBackgroundTint(ContextCompat.getColor(this, R.color.error_background))
-            // White color
             .setTextColor(0xFFFFFFFF.toInt())
             .show()
     }
