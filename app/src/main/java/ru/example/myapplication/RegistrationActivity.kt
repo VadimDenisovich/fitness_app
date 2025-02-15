@@ -56,7 +56,7 @@ class RegistrationActivity : AppCompatActivity() {
                 binding.passwordEditText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
                 binding.passwordInput.endIconDrawable?.setColorFilter(subtitleColor, android.graphics.PorterDuff.Mode.SRC_IN)
             }
-            // Move cursor to the end of the text
+            
             binding.passwordEditText.setSelection(binding.passwordEditText.text?.length ?: 0)
         }
     }
