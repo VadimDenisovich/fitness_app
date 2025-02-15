@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary -->
+    <color name="primary_button_color">#4B09F3</color>
+    <!-- Black main back -->
+    <color name="main_title_color">#101010</color>
+    <!-- Secondary -->
+    <color name="subtitle_color">#808080</color>
+    <!--  Error  -->
+    <color name="error_background">#B00020</color>
+    <!--  For background  -->
+    <color name='gray_background'>#F0F0F0</color>
+</resources>

@@ -1,0 +1,43 @@
+<resources>
+    <!-- WelcomeActivity -->
+    <string name="app_name">KotlinApp</string>
+    <string name="main_title">Пожалуй, лучший фитнес\nтренер в ДВФУ</string>
+    <string name="subtitle">Созданный студентами</string>
+    <string name="register">Зарегистрироваться</string>
+    <string name="login_prompt">Уже есть аккаунт?</string>
+    <string name="header_image_desc">Изображение велосипедистов</string>
+
+    <!-- RegistrationActivity -->
+    <string name="registration_title">Регистрация</string>
+    <string name="login_hint">Логин</string>
+    <string name="nickname_hint">Имя или никнейм</string>
+    <string name="password_hint">Пароль</string>
+    <string name="confirm_password_hint">Повторите пароль</string>
+    <string name="gender_label">Пол</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
+    <string name="other">Другое</string>
+    <string name="policy_agreement">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности и обработки персональных данных, а также принимаете пользовательское соглашение</string>
+
+    <!-- LogInActivity -->
+    <string name="login_title">Вход</string>
+    <string name="login">Войти</string>
+    <string name="toggle_password_visibility">Посмотреть пароль</string>
+
+    <!--  MainActivity  -->
+    <string name="titleText_mainActivity">Время потренить</string>
+    <string name="subtitleText_mainActivity">Нажимай на кнопку ниже и начинаем трекать активность</string>
+
+    <!-- bottom_nav_menu for MainActivity -->
+    <string name="nav_activity_title">Активность</string>
+    <string name="nav_activity_profile">Профиль</string>
+
+    <!-- UsersActivitiesFragment -->
+    <string name="titleYesterday">Вчера</string>
+    <string name="tvDistance">12.7 км</string>
+    <string name="tvDuration">2 часа 46 минут</string>
+    <string name="tvUserId">\@pasha_technik</string>
+    <string name="tvActivityType">Серфинг</string>
+    <string name="tvTimeAgo">14 часов назад</string>>
+</resources>
+

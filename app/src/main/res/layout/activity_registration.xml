@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_registration.xml (app/src/main/res/layout/) -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- AppBar с кнопкой назад -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="@string/registration_title"
+        app:navigationIconTint="@color/primary_button_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="-18dp"/>
+
+    <!-- Поле логина -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/loginEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/login_hint"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Поле никнейма -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nicknameInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/loginInput"
+        android:layout_marginTop="12dp"
+        app:boxStrokeColor="@color/primary_button_color">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nicknameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/nickname_hint"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Поле пароля -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/nicknameInput"
+        android:layout_marginTop="12dp"
+        app:boxStrokeColor="@color/primary_button_color"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_eye"
+        app:endIconContentDescription="@string/toggle_password_visibility">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Поле подтверждения пароля -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirmPasswordInput"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/passwordInput"
+        android:layout_marginTop="12dp"
+        app:boxStrokeColor="@color/primary_button_color"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_eye"
+        app:endIconContentDescription="@string/toggle_password_visibility">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirmPasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/confirm_password_hint"
+            android:inputType="textPassword"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Текст "Пол" -->
+    <TextView
+        android:id="@+id/genderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gender_label"
+        android:textColor="@color/main_title_color"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/confirmPasswordInput"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="25dp"/>
+
+    <!-- Зона ошибки выбора пола -->
+    <TextView
+        android:id="@+id/genderError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/error_background"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/genderGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Группа выбора пола -->
+    <RadioGroup
+        android:id="@+id/genderGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/confirmPasswordInput"
+        android:layout_marginTop="56dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/maleRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/male"
+            android:buttonTint="@color/radio_button_color"/>
+
+        <RadioButton
+            android:id="@+id/femaleRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/female"
+            android:buttonTint="@color/radio_button_color"/>
+
+        <RadioButton
+            android:id="@+id/otherRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/other"
+            android:buttonTint="@color/radio_button_color"/>
+    </RadioGroup>
+
+    <!-- Кнопка регистрации -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerButton"
+        android:layout_width="420dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="32dp"
+        android:paddingVertical="2dp"
+        android:text="@string/register"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/primary_button_color"
+        app:cornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genderGroup"/>
+
+    <!-- Текст с политиками -->
+    <TextView
+        android:id="@+id/policyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/policy_agreement"
+        android:textColor="@color/subtitle_color"
+        android:textSize="12sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/registerButton"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

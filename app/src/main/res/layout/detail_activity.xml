@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- AppBar с кнопкой назад -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="Вид активности"
+        app:navigationIconTint="@color/primary_button_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="-18dp"/>
+
+    <LinearLayout
+        android:id="@+id/metricsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:layout_marginTop="24dp">
+
+        <!-- Айди пользователя -->
+        <TextView
+            android:id="@+id/userId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="\@nick_name"
+            android:textColor="@color/primary_button_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+        <!-- Дистанция -->
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12.7км"
+            android:textColor="@color/main_title_color"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/userId"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+        <!-- Сколько времени прошло -->
+        <TextView
+            android:id="@+id/timeAgo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvTimeAgo"
+            android:textColor="@color/subtitle_color"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/distance" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp"/>
+
+        <!-- Длительность -->
+        <TextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvDuration"
+            android:textColor="@color/main_title_color"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/timeAgo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Время активности -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@id/duration"
+            android:layout_marginTop="16dp">
+
+            <!-- «Старт» -->
+            <TextView
+                android:id="@+id/startText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Старт"
+                android:textColor="@color/main_title_color"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/duration" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="match_parent"/>
+
+            <!-- Время старта -->
+            <TextView
+                android:id="@+id/startTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14:49"
+                android:textColor="@color/subtitle_color"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/startText"
+                app:layout_constraintStart_toStartOf="@id/startText" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="match_parent"/>
+
+            <!-- «Финиш» -->
+            <TextView
+                android:id="@+id/finishText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="| Финиш"
+                android:textColor="@color/main_title_color"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/startTime"
+                app:layout_constraintStart_toStartOf="@id/startTime" />
+
+            <View
+                android:layout_width="8dp"
+                android:layout_height="match_parent"/>
+
+            <!-- Время финиша -->
+            <TextView
+                android:id="@+id/finishTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16:31"
+                android:textColor="@color/subtitle_color"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@id/finishText"
+                app:layout_constraintStart_toStartOf="@id/finishText" />
+
+        </LinearLayout>
+
+        <!-- Комментарий -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/comment_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Я бежал очень сильно, ты так не сможешь"
+                android:textColor="#808080"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
