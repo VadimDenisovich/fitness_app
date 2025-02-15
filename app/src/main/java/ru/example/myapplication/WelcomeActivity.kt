@@ -6,7 +6,6 @@ import android.widget.ImageView
 import ru.example.myapplication.databinding.ActivityWelcomeBinding
 import androidx.appcompat.app.AppCompatActivity
 
-// WelcomeActivity.kt
 class WelcomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWelcomeBinding
 
@@ -31,7 +30,8 @@ class WelcomeActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
         }
 
-        // Удалить! Кнопка на время разработке, для отладки
+        // Временная кнопка для быстрого перемещения до актуального экрана
+    
         binding.teleportButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
