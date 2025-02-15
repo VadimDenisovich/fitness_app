@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 when (tab.position) {
-                    0 -> checkActivities() // Check the database for activities
+                    0 -> checkActivities() 
                     1 -> {
                         showActivitiesList()
                     }
@@ -60,11 +60,11 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {
-                // No action needed
+                
             }
 
             override fun onTabReselected(tab: TabLayout.Tab) {
-                // No action needed
+               
             }
         })
 
